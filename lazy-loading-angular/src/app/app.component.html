@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/">Home</a>
+    </li>
+    <li>
+      <a routerLink="/fibonacci">Fibonacci</a>
+    </li>
+  </ul>
+</nav>
+
+<div>
+  <p>I am the <strong>home</strong> component.</p>
+<button (click)="showMe()">{{ showFibonacci ? 'Hide' : 'Show' }}</button>
+  <div *ngIf="showFibonacci">
+    <app-fibonacci-one></app-fibonacci-one>
+  </div>
+</div>
+<router-outlet></router-outlet>
